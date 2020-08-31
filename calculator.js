@@ -9,25 +9,28 @@ function onReady() {
   $('#addEmployeeBtn').on('click', onAddEmployee)
 }
 
+
 function onAddEmployee() {
   console.log('time to add an employee');
 
   // get values from <inputs>
-  let firstName = $('#firstNameInput').val();
-  let lastName = $('#lastNameInput').val();
-  let id = $('#idInput').val();
-  let title = $('#titleInput').val();
-  let salary = $('#salaryInput').val();
-  console.log('employee info', firstName, lastName, id, title, salary)
+  let employee = {
+    firstName: $('#firstNameInput').val(),
+    lastName: $('#lastNameInput').val(),
+    id: $('#idInput').val(),
+    title: $('#titleInput').val(),
+    salary: $('#salaryInput').val()
+  };
+  console.log('employee info', employee);
 
   // TODO append values to <table>
   $('#employeeTable').append(`
     <tr>
-      <td>${firstName}</td>
-      <td>${lastName}</td>
-      <td>${id}</td>
-      <td>${title}</td>
-      <td>${salary}</td>
+      <td>${employee.firstName}</td>
+      <td>${employee.lastName}</td>
+      <td>${employee.id}</td>
+      <td>${employee.title}</td>
+      <td>${employee.salary}</td>
       <td><button>Delete</button></td>
     </tr>
   `);
