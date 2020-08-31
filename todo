@@ -1,5 +1,6 @@
 Todo:
 
+[ ] Static HTML mockup
 [ ] Form to collect employee info
     - first name
     - last name
@@ -15,6 +16,8 @@ Todo:
     [ ] Do not update monthly costs (base mode)
 
 
+For later:
+- style my table
 
 Stretch mode
 ....
