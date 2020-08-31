@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Salary Calculator</title>
+
+  <script src="jquery.js"></script>
+  <script src="calculator.js"></script>
 </head>
 <body>
   <h1>Salary Calculator</h1>
@@ -11,12 +14,12 @@
   <h2>Add Employee</h2>
 
   <!-- New Employee Form -->
-  <input type="text" placeholder="First Name" />
-  <input type="text" placeholder="Last Name" />
-  <input type="text" placeholder="ID" />
-  <input type="text" placeholder="Title" />
-  <input type="number" placeholder="Annual Salary" />
-  <button>Submit</button>
+  <input id="firstNameInput" type="text" placeholder="First Name" />
+  <input id="lastNameInput" type="text" placeholder="Last Name" />
+  <input id="idInput" type="text" placeholder="ID" />
+  <input id="titleInput" type="text" placeholder="Title" />
+  <input id="salaryInput" type="number" placeholder="Annual Salary" />
+  <button id="addEmployeeBtn">Submit</button>
 
   <h2>Employees</h2>
 

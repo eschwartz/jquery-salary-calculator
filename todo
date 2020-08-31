@@ -1,7 +1,7 @@
 Todo:
 
-[ ] Static HTML mockup
-[ ] Form to collect employee info
+[x] Static HTML mockup
+[x] Form to collect employee info
     - first name
     - last name
     - ID
