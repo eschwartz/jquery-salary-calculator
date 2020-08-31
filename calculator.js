@@ -9,6 +9,10 @@ function onReady() {
   $('#addEmployeeBtn').on('click', onAddEmployee)
 }
 
+// Track total monthly costs for all employees
+// (GLOBAL variable)
+let totalMonthlyCosts = 0;
+
 
 function onAddEmployee() {
   console.log('time to add an employee');
@@ -19,7 +23,7 @@ function onAddEmployee() {
     lastName: $('#lastNameInput').val(),
     id: $('#idInput').val(),
     title: $('#titleInput').val(),
-    salary: $('#salaryInput').val()
+    salary: Number($('#salaryInput').val())
   };
   console.log('employee info', employee);
 
@@ -42,8 +46,8 @@ function onAddEmployee() {
   $('#titleInput').val('');
   $('#salaryInput').val('');
     
-  // TODO update monthly costs
-
-
-  
+  // Update monthly costs
+  let monthlySalary = employee.salary / 12;
+  totalMonthlyCosts += monthlySalary;
+  $('#monthlyCosts').text(totalMonthlyCosts);
 }
