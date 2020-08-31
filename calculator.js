@@ -23,7 +23,7 @@ function onAddEmployee() {
   };
   console.log('employee info', employee);
 
-  // TODO append values to <table>
+  // append values to <table>
   $('#employeeTable').append(`
     <tr>
       <td>${employee.firstName}</td>
@@ -35,5 +35,15 @@ function onAddEmployee() {
     </tr>
   `);
 
+  // Clear input fields
+  $('#firstNameInput').val('');
+  $('#lastNameInput').val('');
+  $('#idInput').val('');
+  $('#titleInput').val('');
+  $('#salaryInput').val('');
+    
   // TODO update monthly costs
+
+
+  
 }

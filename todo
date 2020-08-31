@@ -9,8 +9,8 @@ Todo:
     - annual salary
 [ ] Submit button
     [ ] calculate monthly costs & append to DOM
-    [ ] Add employee info to table row
-    [ ] Clear input fields
+    [x] Add employee info to table row
+    [x] Clear input fields
 [ ] Delete button
     [ ] Remove employee from DOM
     [ ] Do not update monthly costs (base mode)
