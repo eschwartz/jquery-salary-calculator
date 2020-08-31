@@ -12,7 +12,7 @@ function onReady() {
 function onAddEmployee() {
   console.log('time to add an employee');
 
-  // TODO get values from <inputs>
+  // get values from <inputs>
   let firstName = $('#firstNameInput').val();
   let lastName = $('#lastNameInput').val();
   let id = $('#idInput').val();
@@ -21,6 +21,16 @@ function onAddEmployee() {
   console.log('employee info', firstName, lastName, id, title, salary)
 
   // TODO append values to <table>
+  $('#employeeTable').append(`
+    <tr>
+      <td>${firstName}</td>
+      <td>${lastName}</td>
+      <td>${id}</td>
+      <td>${title}</td>
+      <td>${salary}</td>
+      <td><button>Delete</button></td>
+    </tr>
+  `);
 
   // TODO update monthly costs
 }
