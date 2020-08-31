@@ -24,6 +24,14 @@ function onDelete() {
 
   // Remove parent <tr>
   $(this).parent().parent().remove();
+
+  // Grab the <td> with this employee's salaray in it
+  let salaryTd = $(this).parent().siblings('.salary');
+  // Grab the actual value of the salary
+  let employeeSalary = Number(salaryTd.text());
+
+  // Update global var,
+  updateTotalMonthlyCosts(employeeSalary * -1);
 } 
 
 function onAddEmployee() {
@@ -46,7 +54,7 @@ function onAddEmployee() {
       <td>${employee.lastName}</td>
       <td>${employee.id}</td>
       <td>${employee.title}</td>
-      <td>${employee.salary}</td>
+      <td class="salary">${employee.salary}</td>
       <td><button class="deleteBtn">Delete</button></td>
     </tr>
   `);
@@ -59,13 +67,27 @@ function onAddEmployee() {
   $('#salaryInput').val('');
     
   // Update monthly costs
-  let monthlySalary = employee.salary / 12;
+  updateTotalMonthlyCosts(employee.salary)
+}
+
+function updateTotalMonthlyCosts(annualSalaryChange) {
+  // Convert to monthly change
+  let monthlySalary = annualSalaryChange / 12;
+
+  // Update global
   totalMonthlyCosts += monthlySalary;
+
+  // Update DOM
   $('#monthlyCosts').text(totalMonthlyCosts);
 
-
+  // Over budget check
   // If total monthly > $20, make it red
   if (totalMonthlyCosts > 20000) {
     $('#monthlyCostsContainer').addClass("overBudget");
+  }
+
+  // if less than $20, change back
+  else {
+    $('#monthlyCostsContainer').removeClass("overBudget");
   }
 }
