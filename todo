@@ -1,0 +1,20 @@
+Todo:
+
+[ ] Form to collect employee info
+    - first name
+    - last name
+    - ID
+    - job title
+    - annual salary
+[ ] Submit button
+    [ ] calculate monthly costs & append to DOM
+    [ ] Add employee info to table row
+    [ ] Clear input fields
+[ ] Delete button
+    [ ] Remove employee from DOM
+    [ ] Do not update monthly costs (base mode)
+
+
+
+Stretch mode
+....
