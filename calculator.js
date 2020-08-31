@@ -6,13 +6,25 @@ function onReady() {
   // On submit button click, 
   // add employee to table
   // and update monthly costs
-  $('#addEmployeeBtn').on('click', onAddEmployee)
+  $(document).on('click', '#addEmployeeBtn', onAddEmployee);
+
+  // On delete button click
+  // remove employee from table
+  console.log('setting up onDelete event', $('.deleteBtn'))
+  $(document).on('click', '.deleteBtn', onDelete);
 }
 
 // Track total monthly costs for all employees
 // (GLOBAL variable)
 let totalMonthlyCosts = 0;
 
+
+function onDelete() {
+  console.log('in onDelete');
+
+  // Remove parent <tr>
+  $(this).parent().parent().remove();
+} 
 
 function onAddEmployee() {
   console.log('time to add an employee');
@@ -35,7 +47,7 @@ function onAddEmployee() {
       <td>${employee.id}</td>
       <td>${employee.title}</td>
       <td>${employee.salary}</td>
-      <td><button>Delete</button></td>
+      <td><button class="deleteBtn">Delete</button></td>
     </tr>
   `);
 

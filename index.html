@@ -37,13 +37,15 @@
     </thead>
     <tbody id="employeeTable">
       <!-- 
-      <tr>
+      <tr>                        <-- $(this).parent().parent()
         <td>Jen</td>
         <td>Barber</td>
         <td>4521</td>
-        <td>Team Lead</td>
+        <td>Team Lead</td>        <-- $(this).parent().siblings().eq(3)
         <td>$80,000</td>
-        <td><button>Delete</button></td>
+        <td>                      <-- $(this).parent()
+          <button>Delete</button> <-- $(this)
+        </td>
       </tr>
       <tr>
         <td>Jen</td>

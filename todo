@@ -7,8 +7,8 @@ Todo:
     - ID
     - job title
     - annual salary
-[ ] Submit button
-    [ ] calculate monthly costs & append to DOM
+[x] Submit button
+    [x] calculate monthly costs & append to DOM
     [x] Add employee info to table row
     [x] Clear input fields
 [ ] Delete button
