@@ -11,9 +11,10 @@ Todo:
     [x] calculate monthly costs & append to DOM
     [x] Add employee info to table row
     [x] Clear input fields
-[ ] Delete button
-    [ ] Remove employee from DOM
-    [ ] Do not update monthly costs (base mode)
+[x] Delete button
+    [x] Remove employee from DOM
+        - Do not update monthly costs (base mode)
+[ ] Add red background, if >$20k
 
 
 For later:

@@ -62,4 +62,10 @@ function onAddEmployee() {
   let monthlySalary = employee.salary / 12;
   totalMonthlyCosts += monthlySalary;
   $('#monthlyCosts').text(totalMonthlyCosts);
+
+
+  // If total monthly > $20, make it red
+  if (totalMonthlyCosts > 20000) {
+    $('#monthlyCostsContainer').addClass("overBudget");
+  }
 }
